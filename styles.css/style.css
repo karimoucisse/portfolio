@@ -1,9 +1,0 @@
-@font-face {
-    font-family: poppins;
-    src: url("fonts/poppins.ttf");
-    src: url("fonts/Poppins-Medium.ttf");
-}
-body {
-    margin:0;
-    padding:0;
-}
