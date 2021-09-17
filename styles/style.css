@@ -24,57 +24,88 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 3px 40px;
-    border-bottom: 4px solid rgb(12, 85, 128);
-    background-color: rgb(15, 146, 221);
-    color: #fff;
+    padding:  0 46px;
+    border-bottom: 4px solid rgb(6, 43, 65);
 }
-header .logo {
+header .logo_principal {
     font-size: 34px;
 
 }
 header nav {
-    
-
+    /*border: 2px solid red;*/
 }
 header nav ul {
-    list-style: none;
+    list-style: none;   
+   /* border: 2px solid black;*/
 }
 header nav ul li {
     display: inline;
     margin-left: 20px;
+    
 }
-header nav ul li a {
+header nav ul .nav_element {
+    /*padding: 26px 3px;*/
+}
+header nav ul .nav_element a {
+    color: black;
+    padding: 26px 3px;
+    border-radius: 10px; 
+}
+header nav ul:hover li a:hover {
+    background-color: rgb(15, 146, 221);
     color: #fff;
-    padding: 4px 4px;
+    
 }
-header nav ul li a:hover {
-    background-color: #fff;
-    color: rgb(12, 85, 128);
-    border-radius: 10px;
+header nav ul .home_logo {
+    /*border: 2px solid ;*/
+    background-color: rgb(15, 146, 221);
+    padding: 26px 3px;
 }
+header nav ul .home_logo i {
+    /*background-color: rgb(15, 146, 221);*/
+    color: #fff;
+   /* padding: 6px 3px;*/
+}
+/**************************************************************************************/
+
 .logo_bottom{
     position: absolute;
     bottom: 40px;
     left: 40px;
     font-size: 30px;
-    z-index: -1;
+    z-index: 2;
     padding: 10px;
 }
 .logo_bottom div {
     display: inline;
     margin-right: 20px;
     /*color: rgb(15, 146, 221);*/
-    padding: 3px 5px;
-    font-size: 32px;
-    border-radius: 5px;
+    
     
 }
 .logo_bottom div i {
-    color: black;
+    color: /*rgb(15, 146, 221)*/#fff;
+    padding: 2px 4px;
+    border-radius: 5px;
+    
 }
 .logo_bottom div i:hover  {
+    background-color: #fff;
+    color: rgb(15, 146, 221);
+    
+}
+
+/**************************************************************************************************/
+.home {
+    text-align: center;
+    padding: 18em 0;
     background-color: rgb(15, 146, 221);
     color: #fff;
-    
+    z-index: -1;
+}
+.home .name {
+    font-size: 44px;
+}
+.home .job {
+    font-size: 50px;
 }
