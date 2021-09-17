@@ -6,11 +6,18 @@
     font-family: "Poppins-medium";
     src: url("../fonts/Poppins-Medium.ttf");
 }
+@font-face {
+    font-family: "Grechen";
+    src: url("../fonts/GrechenFuemen-Regular.ttf");
+}
 .fonts_poppins {
     font-family: "Poppins";
 }
 .fonts_poppins_medium {
     font-family: "Poppins-medium";
+}
+.fonts_grechen {
+    font-family: "Grechen";
 }
 a{
     text-decoration: none;
@@ -28,8 +35,10 @@ header {
     border-bottom: 4px solid rgb(6, 43, 65);
 }
 header .logo_principal {
-    font-size: 34px;
-
+    font-size: 38px;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    color: red;
 }
 header nav {
     /*border: 2px solid red;*/
@@ -82,7 +91,7 @@ header nav ul:hover .nav_element a:hover {
     bottom: 40px;
     right: 40px;
     font-size: 35px;
-    z-index: 2;
+    /*z-index: 2;*/
     position:fixed;
     /*padding: 15px;*/
 }
@@ -94,10 +103,11 @@ header nav ul:hover .nav_element a:hover {
     
 }
 .logo_bottom div i {
-    color: /*rgb(15, 146, 221)*/#fff;
+    color: black;
     padding: 4px 6px;
     border-radius: 5px;
-    
+    opacity: 0.75;
+     
 }
 .logo_bottom div i:hover  {
     background-color: #fff;
@@ -108,16 +118,19 @@ header nav ul:hover .nav_element a:hover {
 /**************************************************************************************************/
 .home {
     text-align: center;
-    padding: 10em 0;
+    padding: 8em 0;
     background-color: rgb(15, 146, 221);
+   /*background-image: url("../images/home.jpg") ;*/
     color: #fff;
+    margin-bottom: 40px;
 }
 .home .name {
     font-size: 34px;
+    margin-bottom: 1em;
 }
 .home .job {
-    font-size: 50px;
-    margin-bottom: 3.5em;
+    font-size: 5em;
+    margin-bottom: 2.3em;
     text-decoration: underline ;
 }
 .home .logo_home i {
@@ -131,4 +144,24 @@ header nav ul:hover .nav_element a:hover {
     background-color: #fff;
     color:rgb(15, 146, 221) ;
     transform: scale(1.3);
+}
+/***********************************************************************************************/
+.competence {
+    flex-direction: column;
+    
+}
+.competence .titre_competence {
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    
+}
+.competence .box_competence {
+    display: flex;
+    justify-content: space-around;
+    /*column-gap: 40px;*/
+}
+.competence .box_competence .sous_titre {
+    font-size: 25px;
 }
