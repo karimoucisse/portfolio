@@ -18,6 +18,7 @@
 }
 .fonts_grechen {
     font-family: "Grechen";
+    font-weight: bold;
 }
 a{
     text-decoration: none;
@@ -37,8 +38,8 @@ header {
 header .logo_principal {
     font-size: 38px;
     text-transform: uppercase;
-    letter-spacing: 8px;
-    color: red;
+    letter-spacing: 4px;
+    color: black/*rgb(15, 146, 221)*/;
 }
 header nav {
     /*border: 2px solid red;*/
@@ -48,13 +49,13 @@ header nav ul {
    /* border: 2px solid black;*/
 }
 header nav ul li {
-    display: inline;
+    display: inline-block;
     margin-left: 20px;
     
 }
 header nav ul .home_logo a {
     /*border: 2px solid ;*/
-    background-color: rgb(15, 146, 221);
+    background-color: black;
     padding: 26px 10px;
     color: #fff;
 }
@@ -63,11 +64,13 @@ header nav ul .home_logo i {
     /*color: #fff;*/
    /* padding: 6px 3px;*/
    font-size: 30px;
+   
 }
 header nav ul .home_logo a:hover {
-    color: rgb(15, 146, 221);
+    color: black;
     background-color:#fff;
     padding: 0 10px;
+
 }
 
 header nav ul .nav_element {
@@ -76,10 +79,11 @@ header nav ul .nav_element {
 header nav ul .nav_element a {
     color: black;
     padding: 26px 3px;
-    border-radius: 10px; 
+    border-radius: 0 0 10px 10px; 
+    transition: ease-in 0.3s;
 }
 header nav ul:hover .nav_element a:hover {
-    background-color: rgb(15, 146, 221);
+    background-color: black;
     color: #fff;
     
 }
@@ -103,15 +107,14 @@ header nav ul:hover .nav_element a:hover {
     
 }
 .logo_bottom div i {
-    color: black;
+    color: #fff/*rgb(15, 146, 221)*/;
     padding: 4px 6px;
     border-radius: 5px;
-    opacity: 0.75;
-     
+    
 }
 .logo_bottom div i:hover  {
     background-color: #fff;
-    color: rgb(15, 146, 221);
+    color: black;
     
 }
 
@@ -119,10 +122,14 @@ header nav ul:hover .nav_element a:hover {
 .home {
     text-align: center;
     padding: 8em 0;
-    background-color: rgb(15, 146, 221);
-   /*background-image: url("../images/home.jpg") ;*/
+    /*background-color: crimson;*/
+    /*background: linear-gradient(to top, rgb(180, 168, 168), black);*/
+   background-image: url("../images/black.jpg");
+   height: 100vh;
+   width: auto;
+
     color: #fff;
-    margin-bottom: 40px;
+    /*margin-bottom: 40px;*/
 }
 .home .name {
     font-size: 34px;
@@ -131,7 +138,7 @@ header nav ul:hover .nav_element a:hover {
 .home .job {
     font-size: 5em;
     margin-bottom: 2.3em;
-    text-decoration: underline ;
+    /*text-decoration: underline ;*/
 }
 .home .logo_home i {
     font-size: 104px;
@@ -142,26 +149,35 @@ header nav ul:hover .nav_element a:hover {
 }
 .home .logo_home i:hover {
     background-color: #fff;
-    color:rgb(15, 146, 221) ;
+    color:black ;
     transform: scale(1.3);
 }
 /***********************************************************************************************/
-.competence {
+.projet {
     flex-direction: column;
+    background-image: url("../images/white.jpg");
+    height: 100vh;
+    padding: 40px 0;
+    background-color: blue;
     
 }
-.competence .titre_competence {
-    font-size: 30px;
+.projet .titre_projet {
+    font-size: 50px;
     text-align: center;
     text-transform: uppercase;
-    margin-bottom: 40px;
+    margin-bottom: 70px; 
+}
+.projet .box_projet  {
+ display: flex;
+ justify-content: space-around;
     
 }
-.competence .box_competence {
-    display: flex;
-    justify-content: space-around;
-    /*column-gap: 40px;*/
+.projet .box_projet  img {
+    width: 400px;
+    height: 300px;
+    border-radius: 20px;
+
 }
-.competence .box_competence .sous_titre {
-    font-size: 25px;
+.projet .box_projet  img:hover {
+    transform: scale(1.03);
 }
