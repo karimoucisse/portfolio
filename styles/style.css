@@ -24,12 +24,13 @@ a{
     text-decoration: none;
 }
 h2 {
-    font-size: 50px;
+    font-size: 55px;
     text-align: center;
     text-transform: uppercase;
     margin-bottom: 70px; 
     font-family: "Grechen";
     font-weight: bold;
+    text-shadow: 14px 14px 6px black;
 }
 
 body {
@@ -46,7 +47,7 @@ header {
     
 }
 header .logo_principal {
-    font-size: 38px;
+    font-size: 28px;
     text-transform: uppercase;
     letter-spacing: 4px;
     color: black/*rgb(15, 146, 221)*/;
@@ -130,30 +131,49 @@ header nav ul:hover .nav_element a:hover {
 
 /**************************************************************************************************/
 .home {
-    text-align: center;
-    padding: 8em 0;
+    text-align: center; 
     /*background-color: crimson;*/
-    background: linear-gradient(to top,#fff, rgb(102, 98, 98),black);
-   /*background-image: url("../images/black.jpg");*/
-   /*height: 100vh;
+   /* background: linear-gradient(to top,#fff, rgb(102, 98, 98),black);*/
+   background-image: url("../images/home.jpg");
+   background-size: cover;
+   background-repeat: no-repeat;
+   /*height: 100vh;*/
    /*width: auto;*/
-
+   /*opacity: 0.7;*/
     color: #fff;
+    position: relative;
+    padding: 8em 0;
     /*margin-bottom: 40px;*/
+}
+.home .ombre {
+    position: absolute;
+    /*background: linear-gradient(to bottom ,#fff, rgb(102, 98, 98),black);*/
+    background-color: #000000;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    /*z-index: 1; */ 
+    opacity:0.3 ;
 }
 .home .name {
     font-size: 34px;
-    margin-bottom: 1em;
+    margin-bottom: 1em ;
+    position: relative;
+    z-index: 3;
 }
 .home .job {
     font-size: 5em;
     margin-bottom: 2.3em;
+    position: relative;
+    z-index: 3;
     /*text-decoration: underline ;*/
 }
 .home .logo_home i {
     font-size: 104px;
     /*background-color: #fff;*/
     color: #fff;
+    position: relative;
+    z-index: 3;
     /*padding: 5px 5px;*/
     border-radius: 10px;
 }
@@ -167,21 +187,15 @@ header nav ul:hover .nav_element a:hover {
     flex-direction: column;
     /*background-image: url("../images/white.jpg");*/
     /*background-repeat: no-repeat;*/
-    height: 100vh;
-    background: linear-gradient(to bottom ,#fff, rgb(102, 98, 98),rgb(112, 107, 107));
-    /*padding: 40px 0;*/
+    /*height: 100vh;*/
+    /*background: linear-gradient(to bottom ,#fff, rgb(102, 98, 98),rgb(112, 107, 107));*/
+    background-color: rgb(233, 233, 233);
+    padding: 40px 0;
     /*position: relative;*/
    /*background-color: blue;*/
     
 }
-/*.projet .ombre {
-    position: absolute;
-    background: linear-gradient(to bottom ,#fff, rgb(102, 98, 98),black);
-    width: 100%;
-    height: 100%;
-    opacity: 0.7;
-    z-index: 1;
-}*/
+
 
 .projet .box_projet  {
     display: flex;
@@ -195,14 +209,74 @@ header nav ul:hover .nav_element a:hover {
     margin: 20px;
     border-radius: 20px;
     /*border: 2px solid black;*/
-    box-shadow: 3px 3px 7px rgb(92, 92, 92);
-    transition: ease-in 0.01s;
+    box-shadow: 2px 2px 4px rgb(143, 143, 143);
+    transition: ease-in 0.04s;
     position: relative;
     z-index: 2;
 
 }
 .projet .box_projet  img:hover {
     transform: scale(1.008);
-    box-shadow: 6px 6px 2px #000000;
+    box-shadow: 4px 4px 5px #292929;
 
+}
+/************************************************************************************************/
+.competence {
+    background: url("../images/competence.jpg") no-repeat;
+    background-size: cover;
+
+    height: 100vh;
+    display: flex;
+
+    /*justify-content: center;*/
+    flex-direction: column;
+    align-items: center;
+}
+.competence .competence_container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 80%;
+   /*background-color: blue;*/
+   padding: 20px;
+}
+
+.competence .row_competence {
+    /*border: 2px solid red;*/
+    border-radius: 20px;
+    background-color: rgba(240, 94, 94,0.5);
+    box-shadow: 7px 7px 2px rgb(126, 81, 81);
+    /*opacity: 0.5;*/
+    margin-top: 30px;
+    width: 80%;
+    height: 30px;
+    font-size: 20px;
+    
+}
+.competence .row_competence:hover {
+    background-color: rgba(148, 44, 44, 0.3);
+}
+.competence .row_competence .element_competence {
+    background-color: red;
+    border-radius: 20px;
+    color: #fff;
+    text-align:left;    
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+    
+}
+/*.competence .row_competence .element_competence:hover {
+    background-color: rgb(172, 13, 13);
+}*/
+.competence .row_competence .html {
+    width: 60%;
+    
+} 
+.competence .row_competence .css {
+    width: 50%;
+}
+.competence .row_competence .bootstrap {
+    width: 25%;
 }
