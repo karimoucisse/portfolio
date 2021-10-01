@@ -30,7 +30,7 @@ h2 {
     margin-bottom: 70px; 
     font-family: "Grechen";
     font-weight: bold;
-    text-shadow: 14px 14px 6px black;
+    text-shadow: 14px 14px 6px grey;
 }
 
 body {
@@ -42,7 +42,11 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding:  0 46px;
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+    background-color: white;
+    /*padding:  0 46px;*/
     border-bottom: 4px solid rgb(6, 43, 65);
     
 }
@@ -50,10 +54,12 @@ header .logo_principal {
     font-size: 28px;
     text-transform: uppercase;
     letter-spacing: 4px;
+    margin-left: 40px;
     color: black/*rgb(15, 146, 221)*/;
 }
 header nav {
     /*border: 2px solid red;*/
+    margin-right: 40px;
 }
 header nav ul {
     list-style: none;   
@@ -97,6 +103,9 @@ header nav ul:hover .nav_element a:hover {
     background-color: black;
     color: #fff;
     
+}
+header .bars {
+    display: none;
 }
 
 /**************************************************************************************/
@@ -159,13 +168,13 @@ header nav ul:hover .nav_element a:hover {
     font-size: 34px;
     margin-bottom: 1em ;
     position: relative;
-    z-index: 3;
+    z-index: 2;
 }
 .home .job {
     font-size: 5em;
     margin-bottom: 2.3em;
     position: relative;
-    z-index: 3;
+    z-index: 2;
     /*text-decoration: underline ;*/
 }
 .home .logo_home i {
@@ -173,7 +182,7 @@ header nav ul:hover .nav_element a:hover {
     /*background-color: #fff;*/
     color: #fff;
     position: relative;
-    z-index: 3;
+    z-index: 2;
     /*padding: 5px 5px;*/
     border-radius: 10px;
 }
@@ -187,7 +196,7 @@ header nav ul:hover .nav_element a:hover {
     flex-direction: column;
     /*background-image: url("../images/white.jpg");*/
     /*background-repeat: no-repeat;*/
-    /*height: 100vh;*/
+    height: 100vh;
     /*background: linear-gradient(to bottom ,#fff, rgb(102, 98, 98),rgb(112, 107, 107));*/
     background-color: rgb(233, 233, 233);
     padding: 40px 0;
@@ -279,4 +288,22 @@ header nav ul:hover .nav_element a:hover {
 }
 .competence .row_competence .bootstrap {
     width: 25%;
+}
+.competence .row_competence .javascript {
+    width: 15%;
+} 
+
+/***********************************************************************************************************/
+@media screen and (max-width: 900px){
+    header nav {
+        display: none;
+    }
+    header .bars{
+        display: flex;
+        font-size: 30px;
+        margin-right: 40px;
+    }
+    .projet{
+        height: auto;
+    }
 }
