@@ -12,7 +12,8 @@
 
     <header>
         <div class="logo_principal fonts_poppins">Portfolio</div>
-        <nav>
+        <div class="bars"><i class="fas fa-bars" onClick="onBarsClick()"></i></div>
+        <nav id="burger_nav">
             <ul class="fonts_poppins">
                 <li class="home_logo"><a href="#home"><i class="fas fa-home"></i></a></li>
                 <li class="nav_element"><a href="#projet">Projets</a></li>
@@ -20,8 +21,7 @@
                 <li class="nav_element"><a href="#">à propos</a></li>
                 <li class="nav_element"><a href="#">Contact</a></li>
             </ul>
-        </nav>
-        <div class="bars"><i class="fas fa-bars"></i></div>
+        </nav> 
     </header>
     
     <section class="logo_bottom">
@@ -39,22 +39,20 @@
     <section id="projet" class="projet">
         
         <h2 class="titre_projet fonts_grechen">Projets</h2>
-        <div class="box_projet">
-            <div class="reservia">
-                <a href="https://karimoucisse.github.io/" target="_blank">
-                    <img src="./images/reservia.png" alt="site Reservia">
-                </a>
+        <div class="slider">
+            <div id="suivant" onclick="ChangeSlide(1)">
+                <i class="fas fa-angle-double-left"></i>
             </div>
+            
             <div class="deezer">
                 <a href="https://karimoucisse.github.io/Deezer/" target="_blank">
-                    <img src="./images/deezer.png" alt="site Deezer">
+                    <img src="./images/deezer.png" alt="site Deezer" id="slide">
                 </a>
             </div>
-            <div class="cv">
-                <a href="https://karimoucisse.github.io/mycv/" target="_blank" rel="cv personnel">
-                    <img src="./images/cv.png" alt="site cv">
-                </a>
+            <div id="precedent" onclick="ChangeSlide(-1)">
+                <i class="fas fa-angle-double-right"></i>
             </div>
+            
         </div>
     </section>
 
@@ -80,8 +78,7 @@
             </div>
 
         </div>
-    </section>
-    
-    
+    </section>   
+    <script src="./index.js"></script>
 </body>
 </html>
