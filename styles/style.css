@@ -20,6 +20,9 @@
     font-family: "Grechen";
     font-weight: bold;
 }
+.color_red {
+    color: red;
+}
 a{
     text-decoration: none;
 }
@@ -37,6 +40,7 @@ body {
     margin:0;
     padding:0;
     position: relative;
+    box-sizing: border-box;
 }
 header {
     display: flex;
@@ -49,6 +53,13 @@ header {
     /*padding:  0 46px;*/
     border-bottom: 4px solid rgb(6, 43, 65);
     
+}
+.transparent {
+    background-color: rgba(233, 233, 233, 0.3);
+    border-bottom: transparent 2px solid;
+}
+.transparent:hover {
+    background-color: rgb(233, 233, 233);
 }
 header .logo_principal {
     font-size: 28px;
@@ -126,10 +137,9 @@ header .bars {
     margin-right: 20px;
     /*color: rgb(15, 146, 221);*/
     
-    
 }
 .logo_bottom div i {
-    color: red/*rgb(15, 146, 221)*/;
+    color: rgb(233, 233, 233);
     padding: 4px 6px;
     border-radius: 5px;  
 }
@@ -137,6 +147,9 @@ header .bars {
     background-color: #fff;
     color: black;
     
+}
+.logo_bottom div .color_black {
+    color:black;
 }
 
 /**************************************************************************************************/
@@ -208,7 +221,7 @@ header .bars {
 
 
 .projet .slider  {
-display: flex;
+    display: flex;
     justify-content: space-around;
     align-items: center;
     /* flex-wrap: wrap; */
@@ -220,7 +233,7 @@ display: flex;
     color: red;
 }
 .projet .slider i:hover {
-    transform: scale3d(1.4, 0.6, 0.7);
+    transform: scale(1.08);
 }
 .projet .slider  img {
     width: 400px;
@@ -232,12 +245,10 @@ display: flex;
     transition: ease-in 0.04s;
     position: relative;
     z-index: 2;
-
+    box-shadow: 3px 3px 5px #292929;
 }
-.projet .box_projet  img:hover {
-    transform: scale(1.008);
-    box-shadow: 4px 4px 5px #292929;
-
+.projet .slider  img:hover {
+    transform: scale(1.05);
 }
 /************************************************************************************************/
 .competence {
@@ -308,26 +319,30 @@ display: flex;
     header nav {
         position: absolute;
         top:-300px;
-        /* top: 0; */
         right: 0;
         margin: 0;
-        /*height: 100px;*/
-        background-color: rgba(133, 124, 124,0.6);
-        /* padding: 20px 10px ; */
+        background-color: rgba(241, 237, 237, 0.6);
         display: flex;
         align-items: center;
         justify-content: center;
         margin: 0px;
-        border-radius:0 0 10px 10px ;
-          
+        border-radius:0 0 10px 10px ;          
     }
     header .bars{
         display: flex;
         font-size: 30px;
         margin-right: 40px;
+        position: relative;
+        z-index: 5;
+    }
+    header .bars .fa-times {
+        color: red;
     }
     header .dropdown{
-        top : 40px;
+        top : 0px;
+        width: 100%;
+        height: 100vh;
+        font-size: 34px;
     }
     header nav ul .home_logo{
         display: none;
@@ -339,9 +354,9 @@ display: flex;
     /* } */
     header nav ul li {
         display: block;
-        margin-bottom: 20px;
+        margin-bottom: 40px;
     }
-    header nav ul .nav_element a{
+    /* header nav ul .nav_element a{
         color: #fff;
         padding: 4px 10px;
         text-align: center;
@@ -353,7 +368,7 @@ display: flex;
         background-color: #fff;
         color: red;
     }
-    
+     */
     .projet{
         height: auto;
     }
