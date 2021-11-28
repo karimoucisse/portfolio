@@ -11,7 +11,7 @@
 <body>
 
     <header>
-        <div class="logo_principal fonts_poppins">Portfo<span>.lio</span></div>
+        <div class="logo_principal fonts_poppins"><span>Portfolio</span></div>
         <div class="bars" id="bars"><i class="fas fa-bars" id="icone_bars"></i></div>
         <nav id="burger_nav" onClick="onClickRemoveNav()">
             <ul class="fonts_poppins">
@@ -19,45 +19,67 @@
                 <li class="nav_element"><a href="#projet">Projets</a></li>
                 <li class="nav_element"><a href="#competence">Compétences</a></li>
                 <li class="nav_element"><a href="#">à propos</a></li>
-                <li class="nav_element"><a href="#">Contact</a></li>
+                <li class="nav_element"><a href="#contact">Contact</a></li>
             </ul>
         </nav> 
     </header>
     
     <section class="logo_bottom">
-        <div><a target="blank"><i class="fab fa-linkedin" id="logo_linkedin"></i></a></div>
-        <div><a target="blank"><i class="fab fa-github" id="logo_github"></i></a></div>
+        <div><a href="https://www.linkedin.com/in/karimou-cisse/" target="_blank"><i class="fab fa-linkedin" id="logo_linkedin"></i></a></div>
+        <div><a href="https://github.com/karimoucisse" target="_blank"><i class="fab fa-github" id="logo_github"></i></a></div>
     </section>
 
     <section id="home" class="home ">
         <div class="ombre"></div>
-        <div class="name fonts_poppins">karimou cisse</div>
-        <h1 class="job fonts_grechen">Développeur full stack</h1>
+        <div class="name fonts_poppins">Karimou Cisse</div>
+        <h1 class="job fonts_grechen">Développeur Full Stack</h1>
         <div class="logo_home"><a href="#projet"><i class="fas fa-arrow-down"></i></a></div>
     </section>
 
     <section id="projet" class="projet">
         
         <h2 class="titre_projet fonts_grechen">Projets</h2>
-        <div class="slider">
-            <div id="suivant" onclick="ChangeSlide(1)">
-                <i class="fas fa-angle-double-left"></i>
-            </div>
-            
-            <div class="deezer">
+        
+        <div class="project-img-container">
+            <div class="project-img-element">
                 <a href="https://karimoucisse.github.io/Deezer/" target="_blank">
                     <img src="./images/deezer.png" alt="site Deezer" id="slide">
                 </a>
+                <div class="project-about">
+                    <p>Langage : HTML5, CSS3 </p>
+                    <p>maquette du site Deezer</p>
+
+                </div>
             </div>
-            <div id="precedent" onclick="ChangeSlide(-1)">
-                <i class="fas fa-angle-double-right"></i>
+            <div class="project-img-element">
+                <a href="https://karimoucisse.github.io/maquette/" target="_blank">
+                    <img src="./images/reservia.png" alt="site Reservia" id="slide">
+                </a>
+                <div class="project-about">
+                    <p>Langage : HTML5, CSS3</p>
+                    <p>Maquette du site Reservia, projet 
+                        <a href="https://openclassrooms.com/fr/" target="_blank">Openclassrooms</a>
+                    </p>
+
+                </div>
             </div>
-            
+            <div class="project-img-element">
+                <a href="https://gameofthrone.netlify.app/" target="_blank">
+                    <img src="./images/gameofthrone.png" alt="site gameofthrone" id="slide">
+                </a>
+                <div class="project-about">
+                    <p>Langage : React, CSS3</p>
+                    <p>Utilisation d'Api pour faire aparaitre des infos sur les personnage de 
+                        game of throne et par la suite les rajouters en favoris
+                    </p>
+                </div>
+            </div>
         </div>
+            
     </section>
 
     <section id="competence" class="competence">
-        <h2>compétence</h2>
+        <h2>compétences</h2>
 
         <div class="competence_container">
 
@@ -79,6 +101,10 @@
 
         </div>
     </section>   
+
+    <section id="contact" class="contact">
+        
+    </section>
     <script src="./index.js"></script>
 </body>
 </html>
